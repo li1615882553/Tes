@@ -1,0 +1,59 @@
+@import "../../var.scss";
+@import "../../mixins.scss";
+@import "../../icon.scss";
+
+@include b(input-number){
+  position: relative;
+  display: inline-block;
+  width: 180px;
+  line-height: #{ $input-height - 2 };
+
+  .t-input{
+    display: block;
+
+    &__inner{
+      padding-left: #{$input-height + 10};
+      padding-right: #{$input-height + 10};
+      text-align: center;
+    }
+  }
+
+  @include e((add, subtract)){
+    position: absolute;
+    z-index: 1;
+    top: 1px;
+    width: $input-height;
+    height: auto;
+    text-align: center;
+    cursor: pointer;
+    background-color: $background-color;
+    color: $text-color-dark;
+    font-size: 16px;
+
+    &:hover{
+      color: $primary-color;
+    }
+
+    &.is-disabled{
+      color: $text-color-light;
+      cursor: not-allowed;
+    }
+  }
+  @include e(add){
+    right: 1px;
+    border-radius: 0 $border-radius $border-radius 0;
+    border-left: $border-base;
+  }
+  @include e(subtract){
+    left: 1px;
+    border-radius: $border-radius 0 0 $border-radius;
+    border-right: $border-base;
+  }
+
+  @include when(disabled){
+    @include e((add, subtract)){
+      color: $text-color-light;
+      cursor: not-allowed;
+    }
+  }
+}

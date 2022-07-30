@@ -1,0 +1,122 @@
+@import "./var.scss";
+
+//z-index
+$z-index-fixed: 1000 !default;
+
+//字号
+$font-size: 14px !default;
+$font-size-large: 125% !default;
+$font-size-small: 75% !default;
+
+// 动画
+$duration: .2s !default;
+$duration-large: .3s !default;
+$duration-small: .1s !default;
+
+//空白
+$spacer: .5rem !default;
+$spacer-large: 1rem !default;
+$spacer-small: .25rem !default;
+
+
+@mixin state($states: info success warning danger primary) {
+  @each $state in $states {
+    $state: $state  !global;
+
+    @if $state=="info" {
+      $state-text-color: $button-info-font-color  !global;
+      $state-background-color: $button-info-background-color  !global;
+      $state-border-color: $button-info-border-color  !global;
+    }
+
+    @else if $state=="success" {
+      $state-text-color: $button-success-font-color  !global;
+      $state-background-color: $button-success-background-color  !global;
+      $state-border-color: $button-success-border-color  !global;
+    }
+
+    @else if $state=="warning" {
+      $state-text-color: $button-warning-font-color  !global;
+      $state-background-color: $button-warning-background-color  !global;
+      $state-border-color: $button-warning-border-color  !global;
+    }
+
+    @else if $state=="danger" {
+      $state-text-color: $button-danger-font-color  !global;
+      $state-background-color: $button-danger-background-color  !global;
+      $state-border-color: $button-danger-border-color  !global;
+    }
+
+    @else if $state=="primary" {
+      $state-text-color: $button-primary-font-color  !global;
+      $state-background-color: $button-primary-background-color  !global;
+      $state-border-color: $button-primary-border-color  !global;
+    }
+
+    @else {
+      @warn "$state must be of these 'info', 'success', 'warning', 'error', 'primary'. Current value is '#{$state}'.";
+    }
+
+    &-#{$state} {
+      @content;
+    }
+  }
+}
+
+@mixin size($sizes: large small) {
+  @each $size in $sizes {
+    $size: $size  !global;
+
+    @if $size=="large" {
+      $margin-y-size: $margin-y-large  !global;
+      $margin-x-size: $margin-x-large  !global;
+      $padding-y-size: $padding-y-large  !global;
+      $padding-x-size: $padding-x-large  !global;
+      $spacer-size: $spacer-large  !global;
+      $border-radius-size: $border-radius-large  !global;
+      $font-size-size: $font-size-large  !global;
+      $font-weight-size: $font-weight-large  !global;
+      $line-height-size: $line-height-large  !global;
+    }
+
+    @else if $size=="small" {
+      $margin-y-size: $margin-y-small  !global;
+      $margin-x-size: $margin-x-small  !global;
+      $padding-y-size: $padding-y-small  !global;
+      $padding-x-size: $padding-x-small  !global;
+      $spacer-size: $spacer-small  !global;
+      $border-radius-size: $border-radius-small  !global;
+      $font-size-size: $font-size-small  !global;
+      $font-weight-size: $font-weight-small  !global;
+      $line-height-size: $line-height-small  !global;
+    }
+
+    @else if $size=="medium" {
+      $margin-y-size: $margin-y  !global;
+      $margin-x-size: $margin-x  !global;
+      $padding-y-size: $padding-y  !global;
+      $padding-x-size: $padding-x  !global;
+      $spacer-size: $spacer  !global;
+      $border-radius-size: $border-radius  !global;
+      $font-size-size: $font-size  !global;
+      $font-weight-size: $font-weight  !global;
+      $line-height-size: $line-height  !global;
+    }
+
+    @else {
+      @warn "$size must be one of these: 'small', 'large', 'medium'. Current value is '#{$size}'.";
+    }
+
+    &-#{$size} {
+      @content;
+    }
+  }
+}
+
+@mixin clear() {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}

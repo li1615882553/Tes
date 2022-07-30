@@ -1,0 +1,38 @@
+@import "../../config.scss";
+@import "../../var.scss";
+@import "../../mixins.scss";
+@import "../../icon.scss";
+
+@include b(select-group){
+    margin: 0px;
+    padding: 0px;
+
+    @include e(wrap){
+        position: relative;
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+
+        &:not(:last-of-type){
+            padding-bottom: 24px;
+
+            &::after{
+                content: "";
+                position: absolute;
+                display: block;
+                left: 20px;
+                right: 20px;
+                bottom: 12px;
+                height: 1px;
+                background-color: $border-color-light;
+            }
+        }
+    }
+
+    @include e(title){
+        padding-left: 20px;
+        font-size: $select-group-font-size;
+        color: $select-group-color;
+        line-height: $select-group-height;
+    }
+}

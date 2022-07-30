@@ -1,0 +1,56 @@
+body {
+    overflow: hidden;
+    width: 75%;
+    min-width: 1000px;
+    margin: 0px auto;
+    .body-conatiner{
+        display: flex;
+        height: 100%;
+        .nav-container{
+            width: 30%;
+            background-color: antiquewhite;
+        }
+        .body-container{
+            overflow-y: auto;
+            height: 500px;
+            flex-grow: 1;
+            .body-component{
+                height: 1000px;
+                margin-top: 200px;
+            }
+        }
+    }
+}
+.input {
+    width: 360px;
+}
+
+.tag-demo {
+    margin-top: 10px;
+    .t-tag {
+        margin-left: 10px;
+    }
+}
+
+.el-tag+.el-tag {
+    margin-left: 10px;
+}
+
+.button-new-tag {
+    margin-left: 10px;
+    height: 32px;
+    line-height: 30px;
+    padding-top: 0;
+    padding-bottom: 0;
+    vertical-align: bottom;
+
+}
+
+.input-new-tag {
+    width: 90px;
+    margin-left: 10px;
+    vertical-align: bottom;
+    .t-input__inner{
+        height: 32px;
+    }
+}

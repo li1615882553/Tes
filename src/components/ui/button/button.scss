@@ -1,0 +1,146 @@
+@import "../../config.scss";
+@import "../../var.scss";
+@import "../../mixins.scss";
+@import "../../icon.scss";
+
+.t-button {
+  display: inline-block;
+  box-sizing: border-box;
+  border: $border-base;
+  border-radius: $border-radius;
+  color: $button-default-font-color;
+  border-color: $button-default-border-color;
+  background-color: $button-default-background-color;
+
+  cursor: pointer;
+  text-align: center;
+  white-space: pre;
+  user-select: none;
+  transition: border-color ease-in-out $duration, background-color ease-in-out $duration;
+
+  span{
+    padding: $padding-y $padding-x;
+  }
+  
+  &:hover,
+  &:focus {
+    color: $primary-color;
+    border-color: $primary-color-light-7;
+    background-color: $primary-color-light-9;
+  }
+
+  &:active {
+    color: mix($black-color, $primary-color, $button-active-shade-percent);
+    border-color: mix($black-color, $primary-color, $button-active-shade-percent);
+    outline: none;
+  }
+
+  @include when(disable) {
+    &,
+    &:hover,
+    &:focus {
+      color: $button-disabled-font-color;
+      cursor: not-allowed;
+      background-color: $button-disabled-background-color;
+      border-color: $button-disabled-border-color;
+    }
+
+    //此状态未单独出现过,都是根据前一个样式状态进而添加的,所以每个when都需要添加此状态
+    &.is-plain {
+      &,
+      &:hover,
+      &:focus {
+        color: $button-disabled-font-color;
+        cursor: not-allowed;
+        background-color: $button-disabled-background-color;
+        border-color: $button-disabled-border-color;
+      }
+    }
+  }
+
+  @include when(plain) {
+    &:hover,
+    &:focus {
+      background: $white-color;
+      border-color: $primary-color;
+      color: $primary-color;
+    }
+
+    &:active {
+      background: $white-color;
+      border-color: mix($black-color, $primary-color, $button-active-shade-percent);
+      color: mix($black-color, $primary-color, $button-active-shade-percent);
+      outline: none;
+    }
+  }
+
+  @include when(round){
+    border-radius: 20px;
+    padding: 12px 23px;
+  }
+
+  @include when(circle){
+    border-radius: 50%;
+  }
+
+  @include state {
+    color: $state-text-color;
+    background-color: $state-background-color;
+    border-color: $state-border-color;
+
+    &:hover,
+    &:focus {
+      color: $state-text-color;
+      border-color: mix($white-color, $state-border-color, $button-hover-tint-percent);
+      ;
+      background-color: mix($white-color, $state-background-color, $button-hover-tint-percent);
+    }
+
+    &:active {
+      color: $state-text-color;
+      background-color: mix($black-color, $state-background-color, $button-active-shade-percent);
+      border-color: mix($black-color, $state-border-color, $button-active-shade-percent);
+      outline: none;
+    }
+
+    &.is-plain {
+      color: $state-background-color;
+      background-color: mix($white-color, $state-background-color, 90%);
+      border-color: mix($white-color, $state-background-color, 60%);
+
+      &:hover,
+      &:focus {
+        background: $state-background-color;
+        border-color: $state-background-color;
+        color: $white-color;
+      }
+
+      &:active {
+        background: mix($black-color, $state-background-color, $button-active-shade-percent);
+        border-color: mix($black-color, $state-background-color, $button-active-shade-percent);
+        color: $white-color;
+        outline: none;
+      }
+
+      &.is-disabled {
+        &,
+        &:hover,
+        &:focus,
+        &:active {
+          color: mix($white-color, $state-text-color, 40%);
+          background-color: mix($white-color, $state-text-color, 90%);
+          border-color: mix($white-color, $state-text-color, 80%);
+        }
+      }
+    }
+  }
+
+  @include size {
+    border-radius: $border-radius-size;
+    padding: $padding-y-size $padding-x-size;
+    font-size: $font-size-size;
+    &.is-round{
+      padding: $padding-y-size $padding-x-size;
+    }
+  }
+}

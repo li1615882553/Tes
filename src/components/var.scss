@@ -1,0 +1,178 @@
+$namespace: 't';
+$elemen-separator: '__';
+$modifier-separator: '--';
+$state-prefix: "is-";
+
+$font-path: "fonts" !default;
+
+//Transition
+$border-transition-base: border-color .2s cubic-bezier(.645,.045,.355,1) !default;
+$color-transition-base: color .2s liner !default;
+
+
+$primary-color: #2A87FF !default;
+$secondary-color: #6c757d !default;
+$white-color: #fff !default;
+$black-color: #000 !default;
+
+$primary-color-light-1: mix($white-color, $primary-color, 10%) !default;
+$primary-color-light-2: mix($white-color, $primary-color, 20%) !default;
+$primary-color-light-3: mix($white-color, $primary-color, 30%) !default;
+$primary-color-light-4: mix($white-color, $primary-color, 40%) !default;
+$primary-color-light-5: mix($white-color, $primary-color, 50%) !default;
+$primary-color-light-6: mix($white-color, $primary-color, 60%) !default;
+$primary-color-light-7: mix($white-color, $primary-color, 70%) !default;
+$primary-color-light-8: mix($white-color, $primary-color, 80%) !default;
+$primary-color-light-9: mix($white-color, $primary-color, 90%) !default;
+
+$success-color: #67C23A !default;
+$warning-color: #E6A23C !default;
+$danger-color: #F56C6C !default;
+$info-color: #909399 !default;
+
+//background-color
+$background-color: #F5F7FA !default;
+
+//文本
+$text-color: #606266 !default;
+$text-color-dark: #303133 !default;
+$text-color-light: #909399 !default;
+
+//线条
+$border-color: #DCDFE6 !default;
+$border-color-dark: #B4B7BE !default;
+$border-color-light: #E4E7ED !default;
+
+//border
+$border-width: 1px !default;
+$border-style: solid !default;
+$border-base: $border-width $border-style $border-color;
+
+//圆角
+$border-radius: .2rem !default;
+$border-radius-large: .25rem !default;
+$border-radius-small: .15rem !default;
+
+//字体大小
+$font-size: 14px !default;
+$font-size-small: 13px !default;
+$font-size-large: 18px !default;
+
+// 字粗
+$font-weight: normal !default;
+$font-weight-large: 500 !default;
+$font-weight-small: 100 !default;
+
+// 行高
+$line-height: 1.5 !default;
+$line-height-large: 1.75 !default;
+$line-height-small: 1.25 !default;
+
+//z-index
+$index-normal: 1 !default;
+$index-top: 1000 !default;
+$index-popper: 2000 !default;
+
+//外边距
+$margin-y: 1rem !default;
+$margin-x: 1rem !default;
+$margin-y-large: 1.5rem !default;
+$margin-x-large: 1.5rem !default;
+$margin-y-small: .5rem !default;
+$margin-x-small: .5rem !default;
+
+// 内边距
+$padding-y: 3px !default;
+$padding-x: 10px !default;
+$padding-y-large: 5px !default;
+$padding-x-large: 12px !default;
+$padding-y-small: 2px !default;
+$padding-x-small: 7px !default;
+
+// shadow
+$box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04) !default;
+$box-shadow-dark: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .12) !default;
+$box-shadow-light: 0 2px 12px 0 rgba(0, 0, 0, 0.1) !default;
+//button
+$button-default-font-color: $text-color  !default;
+$button-default-background-color: $white-color  !default;
+$button-default-border-color: $border-color  !default;
+/// disable button
+$button-disabled-font-color: $text-color-light  !default;
+$button-disabled-background-color: $white-color  !default;
+$button-disabled-border-color: $border-color-dark  !default;
+//primary button
+$button-primary-font-color: $white-color  !default;
+$button-primary-background-color: $primary-color  !default;
+$button-primary-border-color: $primary-color  !default;
+//success button
+$button-success-font-color: $white-color  !default;
+$button-success-background-color: $success-color  !default;
+$button-success-border-color: $success-color  !default;
+//warning button
+$button-warning-font-color: $white-color  !default;
+$button-warning-background-color: $warning-color  !default;
+$button-warning-border-color: $warning-color  !default;
+//danger button
+$button-danger-font-color: $white-color  !default;
+$button-danger-background-color: $danger-color  !default;
+$button-danger-border-color: $danger-color  !default;
+//info button
+$button-info-font-color: $white-color  !default;
+$button-info-background-color: $info-color  !default;
+$button-info-border-color: $info-color  !default;
+
+$button-hover-tint-percent: 20% !default;
+$button-active-shade-percent: 10% !default;
+
+//Input
+$input-font-size: $font-size  !default;
+$input-font-color: $text-color  !default;
+$input-width: 140px !default;
+$input-height: 40px !default;
+$input-border: $border-base  !default;
+$input-border-color: $border-color-light  !default;
+
+$input-border-radius: $border-radius  !default;
+$input-border-color-hover: $border-color-dark  !default;
+
+$input-background-color: $white-color  !default;
+
+$input-hover-border: $border-color-dark !default;
+$input-clear-hover-color: $text-color !default;
+
+$input-focus-border: $primary-color  !default;
+$input-focus-fill: $white-color  !default;
+
+$input-disabled-fill: $background-color !default;
+$input-disabled-border: $background-color !default;
+$input-disabled-color: $text-color-light !default;
+$input-disabled-placeholder-color: $background-color !default;
+
+$input-icon-color: $text-color-light  !default;
+$input-placeholder-color: $text-color-light !default;
+
+//select
+$select-font-size: 12px !default;
+$select-dropdown-background: $white-color !default;
+$select-dropdown-shadow: $box-shadow-light !default;
+
+$select-dropdown-max-height: 274px !default;
+$select-dropdown-padding: 6px 0!default;
+$select-dropdown-border:solid 1px $border-color-light !default;
+$select-dropdown-empty-padding: 10px 0 !default;
+$select-dropdown-empty-color: $text-color-light !default;
+
+$select-option-height: 34px !default;
+$select-option-hover-background: $background-color !default;
+$select-option-disable-color: $text-color-light !default;
+$select-option-selected-font-color: $primary-color !default;
+
+$select-group-color: $info-color !default;
+$select-group-height: 30px !default;
+$select-group-font-size: 12px !default;
+
+//tag
+$tag-font-size: 12px !default;
+$tag-border-radius: 4px !default;
+$tag-padding: 0 10px !default;

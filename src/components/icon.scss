@@ -1,0 +1,62 @@
+@import "var.scss";
+
+@font-face {
+  font-family: "iconfont";
+  /* Project id  */
+  src: url('../../#{$font-path}/iconfont.ttf') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  display: inline-block;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-cancel:before {
+  content: "\e6db";
+}
+
+.icon-loading:before {
+  content: "\e6d9";
+}
+
+.icon-view:before {
+  content: "\e633";
+}
+
+.icon-upArrow:before {
+  content: "\e65d";
+}
+
+.icon-downArrow:before {
+  content: "\e65e";
+}
+
+.icon-close:before {
+  content: "\e646";
+}
+
+.icon-subtract:before {
+  content: "\e728";
+}
+
+.icon-add:before {
+  content: "\e767";
+}
+
+.icon-loading {
+  animation: rotating 2s linear infinite;
+}
+
+@keyframes rotating {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}

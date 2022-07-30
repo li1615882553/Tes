@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "module": "ES6",
+        "target": "ES5",
+        "jsx": "react-native",
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true, /* Emit design-type metadata for decorated declarations in source files. */
+        "moduleResolution": "node",
+        "typeRoots": [
+            "node_modules/@types"
+        ],
+        "baseUrl": ".",
+        "paths": {
+            "@component/*": [
+                "src/components/*"
+            ]
+        }
+    }
+}

@@ -1,0 +1,35 @@
+@import "../../config.scss";
+@import "../../var.scss";
+@import "../../mixins.scss";
+@import "../../icon.scss";
+
+@include b(select-option) {
+  padding: 0 20px;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: $select-option-height;
+  line-height: $select-option-height;
+  cursor: pointer;
+  box-sizing: border-box;
+  list-style-type:none;
+
+  @include when(disabled){
+    color: $select-option-disable-color;
+    cursor: not-allowed;
+
+    &:hover{
+      background-color: $white-color;
+    }
+  }
+
+  &:hover{
+    background-color: $select-option-hover-background;
+  }
+
+  &.selected{
+    color: $select-option-selected-font-color;
+    font-weight: bold;
+  }
+}
