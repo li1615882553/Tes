@@ -1,7 +1,7 @@
 /**
  * watcher 任务指定调度器
  */
-import nextTick from "@component/ux/nextTick/nextTick";
+import nextTick from "./util/nextTick";
 import Watcher from "./Watcher";
 import { getControlValue } from "../VNode/util/modifyControlValue";
 

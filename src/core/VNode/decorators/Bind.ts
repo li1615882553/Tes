@@ -8,7 +8,7 @@ import Control from "../Control";
  */
 export function bind(selector?: string): PropertyDecorator;
 
-export function bind(selector?: string) {
+export default function bind(selector?: string) {
   return function(target: Control, propertyName: string){
     Object.defineProperty(target, propertyName, {
       //根据css选择器获取组件中的控件节点  

@@ -5,7 +5,7 @@ import { IBaseComponent } from "../template/component";
 import classNames from 'classnames';
 
 import "./input.scss"
-import { bind } from "../../../core/VNode/decorators/Bind";
+import bind from "../../../core/VNode/decorators/Bind";
 
 export interface IInputProps extends IBaseComponent {
   /**绑定值 */

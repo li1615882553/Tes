@@ -96,9 +96,10 @@ export class Splitter extends Draggable {
       this.maxValue
     );
     console.log(this.endValue)
-    if (!this.onDragMove || this.onDragMove(e, this) !== false) {
+    //因为打包问题,暂时注释
+    // if (!this.onDragMove || this.onDragMove(e, this) !== false) {
       this.setValue(this.endValue);
-    }
+    // }
   }
 
   /**

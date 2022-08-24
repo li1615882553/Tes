@@ -2,8 +2,6 @@ import Observe from "../../../core/observable/Observe";
 import { uid } from "../../../shared/util/index";
 import dataReadOnlyOptions from "../../../shared/const/observeReadOnlyOps";
 import injectionPrivateToInstance from "../util/injectionPrivateToInstance";
-import VNode from "../../../core/VNode/VNode";
-
 /**
  * 往实例选项中添加 $options(创建的数据) 和 $info 信息
  * @param isCustomElement 

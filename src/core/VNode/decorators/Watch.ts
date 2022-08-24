@@ -2,7 +2,7 @@ import { watchMap, WatchOptions } from "../../prototype/$watch";
 import { create, isArray, apply } from "../../../shared/util/index";
 import { createDecorator } from "./util";
 
-export default function watch(path:string, options:Omit<WatchOptions, "handler" | "isCalledSelf"> = {}){
+export default function Watch(path:string, options:Omit<WatchOptions, "handler" | "isCalledSelf"> = {}){
   return createDecorator(function(componentOptions, handler) {
     if(typeof componentOptions.watch !== 'object'){
       componentOptions.watch = create(null);
