@@ -1,17 +1,23 @@
 {
-  "name": "Tes",
+  "name": "tes-work",
   "version": "1.0.0",
   "description": "An MVVM framework based on proxy and tsx",
   "main": "index.js",
+  "types": "./dist/types/index.d.ts",
   "keywords": [
     "proxy",
     "ts",
     "MVVM"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/li1615882553/Tes"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "start": "webpack serve"
+    "start": "webpack serve",
+    "prepublish": "webpack"
   },
   "author": "li1615882553",
   "license": "ISC",

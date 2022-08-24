@@ -13,7 +13,8 @@ module.exports = {
         library:{
             name: "Tes",
             type: 'umd'
-        }
+        },
+        clean: true
     },
     optimization:{
         minimize: true,
