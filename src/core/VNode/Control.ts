@@ -7,7 +7,7 @@ import $watch, { WatchOptions } from "../prototype/$watch";
 import $destory from "../prototype/$destory";
 import $cloneNode from "../prototype/$cloneNode";
 import Watcher from "../observable/Watcher";
-import { find } from "../../components/ux/dom/dom";
+import { find } from "../../html/dom/index";
 
 type VNodeText = string | number;
 //TODO 父类中$属性不可写,非$属性会收集对应的依赖

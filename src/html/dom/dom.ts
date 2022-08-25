@@ -95,7 +95,7 @@ function querySelector(node: Element | Document | string, selector?: string, fir
         selector = node;
         node = document;
     }
-    return first ? node.querySelector(selector) : node.querySelectorAll(selector);
+    return first ? node.querySelector(selector!) : node.querySelectorAll(selector!);
 }
 
 /**
