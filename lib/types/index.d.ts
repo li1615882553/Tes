@@ -6,3 +6,13 @@ import VNode from "./core/VNode/VNode";
 import { userDirectives } from "./html/const";
 import nextTick from "./core/observable/util/nextTick";
 export { Control, Component, Bind, Watch, VNode, userDirectives, nextTick };
+declare const _default: {
+    Control: typeof Control;
+    Component: typeof Component;
+    Bind: typeof Bind;
+    Watch: typeof Watch;
+    VNode: typeof VNode;
+    userDirectives: any;
+    nextTick: typeof nextTick;
+};
+export default _default;

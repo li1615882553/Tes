@@ -1,5 +1,4 @@
 import Control from "../Control";
-import { isFunction } from "../../../shared/util/index";
 
 export declare type ControlClass = {
   new (...args: any[]):Control;

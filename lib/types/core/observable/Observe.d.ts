@@ -1,5 +1,5 @@
 import Watcher from "./Watcher";
-import { dataOptions } from "../../types/index";
+import { dataOptions } from "../../types/tes";
 interface observeOptions {
     /**原始对象 */
     target: any;

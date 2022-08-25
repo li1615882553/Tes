@@ -12,8 +12,10 @@ module.exports = {
         filename: '[name].js',
         library:{
             name: "Tes",
-            type: 'umd'
+            type: 'umd',
+            export: 'default'
         },
+        globalObject: 'this',
         clean: true
     },
     optimization:{

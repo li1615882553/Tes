@@ -1,6 +1,6 @@
 import Watcher from "./Watcher";
 import { isFunction, emptyObject, hasOwnProperty, has, set, ownKeys, deleteProperty, isPlainObject, isArray, isEqual, keys } from "../../shared/util/index";
-import { dataOptions, dataPorxyBeforOptions } from "../../types/index";
+import { dataOptions, dataPorxyBeforOptions } from "../../types/tes";
 
 const emptyBeforOptions = { before: undefined };
 

@@ -2,7 +2,7 @@
   "name": "tes-work",
   "version": "1.0.0",
   "description": "An MVVM framework based on proxy and tsx",
-  "main": "index.js",
+  "main": "./dist/Tes.js",
   "types": "./dist/types/index.d.ts",
   "keywords": [
     "proxy",

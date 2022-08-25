@@ -25,9 +25,7 @@
         }
     },
     "include": [
-        "src/**/*.ts",
-        "src/**/*.tsx",
-        "jsx.d.ts",
+        "src"
       ],// 要打包的文件
     "exclude": [
         "node_modules"

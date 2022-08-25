@@ -1,6 +1,6 @@
-/// <reference path="jsx.d.ts" />
+/// <reference path="../../types/jsx.ts" />
 import VNode from "./VNode";
-import { ComponentOptions } from "../../types/index"
+import { ComponentOptions } from "../../types/tes"
 import { create, uid, assign } from "../../shared/util/index";
 import init from "../../static/define/init/index";
 import $watch, { WatchOptions } from "../prototype/$watch";

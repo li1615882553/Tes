@@ -1,5 +1,5 @@
-import Control from "./Control";
-import VNode from "./VNode";
+import Control from "../core/VNode/Control";
+import VNode from "../core/VNode/VNode";
 
 declare global {
   namespace JSX {

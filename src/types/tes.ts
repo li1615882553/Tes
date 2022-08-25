@@ -10,17 +10,9 @@ export interface dataOptions {
         before: dataPorxyBeforOptions;
     }
 }
-type Constructor<T> = new (...args: any[]) => T;
+type Constructor<T=any> = new (...args: any[]) => T;
 
 type originConstructor = String | Number | Boolean | Object | Date | Function | Symbol;
-/**
- * 组件化配置
- */
-export interface userOptions {
-    mixins: {},
-    props: Array<string | Symbol> | { [key: string | symbol]: { type?: originConstructor | Constructor, default?: typeof type, } }
-}
-
 
 type instance = originConstructor
 

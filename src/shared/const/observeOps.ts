@@ -1,4 +1,4 @@
-import { dataPorxyBeforOptions, dataOptions } from "../../types/index";
+import { dataPorxyBeforOptions, dataOptions } from "../../types/tes";
 import { isReserved, isString, keys } from "../util/index";
 
 const options: dataPorxyBeforOptions = (target, name) => {

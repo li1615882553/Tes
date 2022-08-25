@@ -1,4 +1,4 @@
-import { dataOptions } from "../../types/index";
+import { dataOptions } from "../../types/tes";
 declare const dataReadOnlyOptions: dataOptions;
 export default dataReadOnlyOptions;
 /**

@@ -1,4 +1,4 @@
-import { dataPorxyBeforOptions, dataOptions } from "../../types/index";
+import { dataPorxyBeforOptions, dataOptions } from "../../types/tes";
 import Observe, { observerProxySetValue } from "../../core/observable/Observe";
 import { ToggleCollection } from "../../core/observable/Observe";
 import { has } from "../util";

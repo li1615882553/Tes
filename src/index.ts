@@ -14,6 +14,6 @@ import { userDirectives } from "./html/const";
 
 import nextTick from "./core/observable/util/nextTick";
 
-export {
-  Control, Component, Bind, Watch, VNode, userDirectives, nextTick
-}
+export  { Control, Component, Bind, Watch, VNode, userDirectives, nextTick };
+
+export default { Control, Component, Bind, Watch, VNode, userDirectives, nextTick };

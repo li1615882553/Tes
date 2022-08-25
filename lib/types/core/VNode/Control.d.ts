@@ -1,6 +1,6 @@
-/// <reference types="src/core/vnode/jsx" />
+/// <reference path="../../types/jsx.d.ts" />
 import VNode from "./VNode";
-import { ComponentOptions } from "../../types/index";
+import { ComponentOptions } from "../../types/tes";
 import $cloneNode from "../prototype/$cloneNode";
 export default class Control<T = any> {
     constructor();
