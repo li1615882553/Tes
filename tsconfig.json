@@ -1,0 +1,33 @@
+{
+    "compilerOptions": {
+        "outDir": "./lib/",
+        "module": "es6",
+        "target": "es5",
+        "declaration": true, // 是否生成声明文件
+        "declarationDir": "./lib/types/", // 声明文件打包的位置
+        "declarationMap": false, // 是否生成声明文件map文件（便于调试）
+        "jsx": "react-native",
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true, /* Emit design-type metadata for decorated declarations in source files. */
+        "moduleResolution": "node",
+        "lib": [
+            "dom",
+            "es2017"
+        ],
+        "typeRoots": [
+            "node_modules/@types"
+        ],
+        "baseUrl": ".",
+        "paths": {
+            "@component/*": [
+                "src/components/*"
+            ]
+        }
+    },
+    "include": [
+        "src"
+      ],// 要打包的文件
+    "exclude": [
+        "node_modules"
+    ]
+}
