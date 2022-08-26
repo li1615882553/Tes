@@ -1,6 +1,6 @@
 import Control from "./Control";
 import { emptyArray, has, isFunction } from "../../shared/util/index";
-import * as dom from "../../components/ux/dom/index";
+import * as dom from "../../html/dom/dom";
 import { directives, userDirectives } from "../../html/const";
 import { curentControl } from "./render";
 import { getControlValue, setControlValue } from "./util/modifyControlValue";

@@ -1,7 +1,7 @@
 import { isFunction, apply, isString } from "../../shared/util/index";
 import $watch from "../../core/prototype/$watch";
 import parseExpOrFn, { parseSetExp } from "../../core/prototype/util/parseExpOrFn";
-import * as DOM from "../../components/ux/dom/index";
+import * as DOM from "../dom/index";
 import Observe from "../../core/observable/Observe";
 import { isEqual } from "../../shared/util/index";
 import Control from "../../core/VNode/Control";
