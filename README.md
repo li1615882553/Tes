@@ -23,16 +23,17 @@ computed属性可以直接通过`get`和`set`挂载计算属性
 
 ---
 
-## Model
+## 组件属性
+### Model
 `model`分为输入控件的自动`model`,以及自定义组件定义的`model`
 
 `model`可以的在组件/控件响应式的变更传入的值
-### 输入控件的自动`model`
+#### 输入控件的自动`model`
 组件通过`model`关键词对组件进行双向绑定(目前支持的有`input`,`radio`,`checkbox`)
 ```js
 <input model="inputValue">
 ```
-### 自定义组件的`model`
+#### 自定义组件的`model`
 通过`model`\ `value`参数传递到`props.value`属性,如果使用`model`则内部值内部变化后, 组件外部会自动变化, 如果使用`value`则在组件内部发生变化无法继续向组件外部传递
 ```js
 <CheckBoxGroup model="checkBoxChecked" >
@@ -41,6 +42,20 @@ computed属性可以直接通过`get`和`set`挂载计算属性
     <Checkbox label="disable选项"></Checkbox>
 </CheckBoxGroup>
 ```
+
+### ref
+`Control`实例中存在`readonly $refs`参数，可用于存储当前组件内部的组件实例。
+```js
+<Menu ref={this.addRefs("menu")} defaultActive="1-1" onSelect={this.handleSelect}>
+  <SubMenu index="1" title="导航一">
+    <MenuItem index="1-1"><i className="iconfont icon-loading"></i> 我的工作台</MenuItem>
+  </SubMenu>
+  <SubMenu index="2" title="导航二">
+    <MenuItem index="1-3" disabled>消息中心</MenuItem>
+  </SubMenu>
+</Menu>
+```
+目前`ref`中固定语法为`{this.addRefs("xxx")}`,`xxx`表示通过`this.$refs.xxx`来获取组件实例,并且可以调用组件中定义的属性以及方法
 
 # 组件定义
 定义组件通过主动继承`Control`并且添加了`@Component`类修饰符的类来实现
