@@ -28,6 +28,11 @@ export default class Control<T = any> {
   /**组件传入的所有prop数据 */
   readonly props: T;
 
+  /**持有注册过 ref 引用特性的Control对象 */
+  readonly $refs: {
+    [key: string]: Control | Control[]
+  } = {};
+
   /**存储关联元素 */
   private _elem: HTMLElement;
 
@@ -35,7 +40,7 @@ export default class Control<T = any> {
   private $forceUpdate: Watcher;
 
   /**关联的VNode对象 */
-  private $VNode:VNode;
+  private $VNode: VNode;
 
   $watch;
   $destory;
@@ -58,7 +63,7 @@ export default class Control<T = any> {
    * 关联元素  节点可以由 update 方法生成,也可以直接被用户指定
    */
   get elem() {
-    if(!this._elem){
+    if (!this._elem) {
       this.$forceUpdate.getValue()
     }
     return this._elem;
@@ -144,6 +149,18 @@ export default class Control<T = any> {
       return elem && (elem as any).__control__ || elem
     }
     return this.$VNode ? this.$VNode.result as HTMLElement | Control : elem;
+  }
+
+  /**
+   * 向当前Control的ref中添加refName的关联对象
+   * @param refName ref的名称
+   * @returns 返回添加函数,由refDirective调用
+   */
+  addRefs(refName: string) {
+    return (control: Control | Control[]) => {
+      this.$refs[refName] = control;
+      return { refName: refName, refs: this.$refs };
+    }
   }
 }
 
