@@ -214,8 +214,8 @@ function triggerUpdate(subs, deepSubs, lastValue, handler, name, value?: any) {
   }
 
   //遍历当前参数订阅以及父对象的深度监听数据
-  for (const watcher of [...Array.from(sub || []), ...deepSubs]) {
-    watcher.update();
+  for (const watcher of [...Array.from(sub || []), ...Array.from(deepSubs)]) {
+    (watcher as Watcher).update();
   }
 }
 
