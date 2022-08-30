@@ -5,11 +5,7 @@ export default function $cloneNode<P>(element: VNode, props?: Partial<P>, ...chi
   if(props){
     if(!element.props) element.props = {};
     Object.keys(props).forEach(prop => {
-      if(element.props[prop] && isFunction(props[prop])){
-        element.props[prop] = [element.props[prop], props[prop]]
-      }else{
         element.props[prop] = props[prop];
-      }
     })
   }
   if(children.length) {
