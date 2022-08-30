@@ -1,6 +1,6 @@
 {
   "name": "tes-work",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "An MVVM framework based on proxy and tsx",
   "main": "./index.js",
   "types": "./lib/types/index.d.ts",
